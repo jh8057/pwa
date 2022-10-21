@@ -8,6 +8,9 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 export default defineComponent({
+  props: {
+    something: { type: String, default: "" },
+  },
   data() {
     return {
       list: { test: false },
