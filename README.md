@@ -18,6 +18,7 @@ This template should help get you started developing with Vue 3 in Vite.
 - 벽돌깨기 : [link](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)
 - svg : [link](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)
 - audio : [link](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- clean code : [link](https://github.com/qkraudghgh/clean-code-javascript-ko#%EB%AA%A9%EC%B0%A8)
 
 ## Type Support for `.vue` Imports in TS
 
