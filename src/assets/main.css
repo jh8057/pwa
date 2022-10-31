@@ -54,6 +54,7 @@ body {
     opacity: 0;
   }
   100% {
+
     transform: translate3d(0px, 50px, 0px);
     opacity: 1;
   }

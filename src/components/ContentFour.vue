@@ -1,22 +1,9 @@
 <template>
   <div>
     <p>
-      저에 대해서 더욱 알고 싶다면,
-      <span class="emp">1년전</span> 만들어놓은 포트폴리오 사이트도 한번
-      확인해주세요! <br />
-    </p>
-    <p>
-      <a
-        href="https://jh8057.github.io/zzemal/projects/00.portfolio/"
-        target="_blank"
-        >과거 사이트</a
-      >
+      특히, 하이브리드 앱임에도 불구하고 버벅임 없이 잘 돌아가는 것을 보면서,
+      나도 이렇게 사용자들의 편의성을 최우선으로 하는 회사에서 업무를 하고
+      싶다는 생각을 했습니다.
     </p>
   </div>
 </template>
-
-<style>
-a {
-  text-decoration: none;
-}
-</style>
