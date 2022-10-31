@@ -41,12 +41,15 @@ export default defineComponent({
     };
   },
   mounted() {
-    window.addEventListener("scroll", this.checkScrollPosition);
+    this.$nextTick(() => {
+      window.addEventListener("scroll", this.checkScrollPosition);
+    });
   },
   methods: {
     checkScrollPosition() {
       let element = this.$refs.contentThree as any;
-      let threePosition = element.$el.offsetTop + element.$el.offsetHeight / 4;
+      let threePosition =
+        element?.$el.offsetTop + element?.$el.offsetHeight / 4;
       if (window.scrollY > threePosition) {
         setTimeout(() => {
           this.five = true;
