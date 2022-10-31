@@ -5,8 +5,8 @@
   <content-Four class="m20 h50" />
   <content-Five v-if="five" class="ani m20 h30" />
   <empty-page v-else />
-  <content-Six class="m20 h50" ref="contentSix" />
-  <content-Seven class="m20 h60" ref="contentSeven" />
+  <content-Six class="m20 h50" />
+  <content-Seven class="m20 h60" />
 
   <footer-section />
 </template>
