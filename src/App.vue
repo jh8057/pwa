@@ -1,16 +1,22 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-</script>
-
 <template>
-  <header>
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink> |
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
+  <navigation-bar />
 
   <RouterView />
 </template>
+
+<script lang="ts">
+import navigationBar from "./components/navigationBar.vue";
+import { RouterLink, RouterView } from "vue-router";
+import { defineComponent } from "vue";
+export default defineComponent({
+  components: {
+    navigationBar,
+  },
+});
+</script>
+
+<style>
+header {
+  text-align: center;
+}
+</style>

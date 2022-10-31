@@ -33,3 +33,41 @@ a,
     padding: 0 2rem;
   }
 } */
+@import url('https://cdn.jsdelivr.net/gh/toss/tossface/dist/tossface.css');
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Tossface;
+  text-align: center;
+  margin: auto;
+  font-size: large;
+  max-width: 768px;
+}
+.ani{
+  animation: textUp 0.5s ease-in-out normal forwards;
+}
+
+@keyframes textUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0px, 50px, 0px);
+    opacity: 1;
+  }
+}
+
+img {
+  width: 100px;
+}
+
+p {
+  margin: 10px;
+}
+.emp {
+  font-family: none;
+  font-weight: bold;
+  color: #1b64da;
+}
