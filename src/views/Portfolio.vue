@@ -12,6 +12,7 @@
 </template>
 
 <script lang="ts">
+import { defineComponent } from "vue";
 import ContentOne from "../components/ContentOne.vue";
 import ContentTwo from "../components/ContentTwo.vue";
 import ContentThree from "../components/ContentThree.vue";
@@ -21,7 +22,8 @@ import ContentSix from "../components/ContentSix.vue";
 import ContentSeven from "../components/ContentSeven.vue";
 import EmptyPage from "../components/EmptyPage.vue";
 import FooterSection from "../components/FooterSection.vue";
-export default {
+
+export default defineComponent({
   components: {
     ContentOne,
     ContentTwo,
@@ -52,7 +54,7 @@ export default {
       }
     },
   },
-};
+});
 </script>
 
 <style>
