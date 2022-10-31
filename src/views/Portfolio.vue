@@ -42,7 +42,7 @@ export default {
     window.addEventListener("scroll", this.checkScrollPosition);
   },
   methods: {
-    checkScrollPosition(e: Event) {
+    checkScrollPosition() {
       let element = this.$refs.contentThree as any;
       let threePosition = element.$el.offsetTop + element.$el.offsetHeight / 4;
       if (window.scrollY > threePosition) {
