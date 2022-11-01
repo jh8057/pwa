@@ -4,10 +4,12 @@
     <span :class="[{ ability: ani }, 'colorBlue']">{{ myAbility }}</span>
     김재현입니다.
   </h2>
+  <RouterLink to="/portfolio" class="blueButton">포트폴리오 보기</RouterLink>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { RouterLink, RouterView } from "vue-router";
 export default defineComponent({
   props: {
     something: { type: String, default: "" },
@@ -25,7 +27,7 @@ export default defineComponent({
     },
   },
   mounted() {
-    setInterval(this.replaceRandomNum, 3000);
+    setInterval(this.replaceRandomNum, 2000);
   },
   methods: {
     replaceRandomNum() {
@@ -33,7 +35,7 @@ export default defineComponent({
       this.randomNum = Math.floor(Math.random() * 5);
       setTimeout(() => {
         this.ani = false;
-      }, 2500);
+      }, 1500);
     },
   },
 });
@@ -63,5 +65,16 @@ export default defineComponent({
 
 .colorBlue {
   color: #1b64da;
+}
+.blueButton{
+  margin: 10px;
+  padding :11px;
+  font-size:16px;
+  justify-content: center;
+  align-items: center;
+  background-color : #3182f6;
+  color: #f9fafb;
+  border-radius: 10px;
+  text-decoration : none;
 }
 </style>
