@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <p>
       비록 짧은 구성으로 페이지를 만들었지만, 조금이나마 저의 노력과 기술을
       보여드리고 싶었습니다.
@@ -17,7 +17,7 @@
       >
     </div>
     <p class="bolder">감사합니다.</p>
-  </div>
+  </section>
 </template>
 
 <style>

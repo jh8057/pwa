@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <p>
       제가 경험한 핵심 기술에 대해 나열하자면,
       <span class="emp">nuxt.js</span>에서 asyncData를 다루어보며 SSR을
@@ -13,7 +13,7 @@
       <img src="@/assets/img/typescriptlogo.png" />
       <img class="dockerImg" src="@/assets/img/dockerlogo.png" />
     </div>
-  </div>
+  </section>
 </template>
 
 <style scope>

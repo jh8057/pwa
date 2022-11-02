@@ -47,6 +47,7 @@ body {
 }
 .ani{
   animation: textUp 0.5s ease-in-out normal forwards;
+  /* animation-delay: 1.5s; */
 }
 
 @keyframes textUp {
@@ -54,8 +55,7 @@ body {
     opacity: 0;
   }
   100% {
-
-    transform: translate3d(0px, 50px, 0px);
+    transform: translate3d(0px, -50px, 0px);
     opacity: 1;
   }
 }

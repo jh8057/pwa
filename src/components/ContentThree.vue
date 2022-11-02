@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <h3>토스의 깔끔한 디자인을 좋아했습니다.</h3>
     <p>
       군더더기 없는 디자인을 통해서 사용자가 이용하기 편하도록 만들겠다는 생각이
@@ -12,7 +12,7 @@
       src="https://wp-blog.toss.im/wp-content/uploads/2021/02/%E1%84%90%E1%85%A9%E1%84%89%E1%85%B3%E1%84%8C%E1%85%B3%E1%86%BC%E1%84%80%E1%85%AF%E1%86%AB-MTS-%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%86%AB%E1%84%83%E1%85%B3%E1%84%8B%E1%85%A9%E1%84%91%E1%85%B3%E1%86%AB.jpg"
       style="width: 80%"
     />
-  </div>
+  </section>
 </template>
 
 <style></style>

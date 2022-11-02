@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <section>
     <span>저는 웹 개발을 하면서 </span>
     <h3>
       제가 하고 싶어하는 것을 개발하는게 가장 뿌듯하고, 업무효율도 잘 나온다는
@@ -13,7 +13,7 @@
     <img
       src="https://static.toss.im/icons/png/4x/icon-credit-grade-check-2.png"
     />
-  </div>
+  </section>
 </template>
 
 <style>
