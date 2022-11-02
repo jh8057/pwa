@@ -5,17 +5,17 @@
       보여드리고 싶었습니다.
     </p>
     <p>
-      저에 대한 자세한 내용은, 아래 포트폴리오 사이트에서 추가로
-      확인 가능합니다!
+      저에 대한 자세한 내용은, 아래 포트폴리오 사이트에서 추가로 확인
+      가능합니다!
     </p>
-    <p>
+    <div class="mt50">
       <a
         href="https://jh8057.github.io/zzemal/projects/00.portfolio/"
         target="_blank"
         class="blueButton"
         >추가 포트폴리오</a
       >
-    </p>
+    </div>
     <p class="bolder">감사합니다.</p>
   </div>
 </template>
@@ -30,15 +30,19 @@ a {
   font-weight: bolder;
 }
 
-.blueButton{
+.blueButton {
   margin: 10px;
-  padding :11px;
-  font-size:16px;
+  padding: 11px;
+  font-size: 16px;
   justify-content: center;
   align-items: center;
-  background-color : #3182f6;
+  background-color: #3182f6;
   color: #f9fafb;
   border-radius: 10px;
-  text-decoration : none;
+  text-decoration: none;
+}
+
+.mt50 {
+  margin-top: 50px;
 }
 </style>

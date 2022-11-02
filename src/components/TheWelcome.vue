@@ -4,7 +4,9 @@
     <span :class="[{ ability: ani }, 'colorBlue']">{{ myAbility }}</span>
     김재현입니다.
   </h2>
-  <RouterLink to="/portfolio" class="blueButton">포트폴리오 보기</RouterLink>
+  <div class="mt20">
+    <RouterLink to="/portfolio" class="blueButton">포트폴리오 보기</RouterLink>
+  </div>
 </template>
 
 <script lang="ts">
@@ -66,15 +68,18 @@ export default defineComponent({
 .colorBlue {
   color: #1b64da;
 }
-.blueButton{
+.blueButton {
   margin: 10px;
-  padding :11px;
-  font-size:16px;
+  padding: 11px;
+  font-size: 16px;
   justify-content: center;
   align-items: center;
-  background-color : #3182f6;
+  background-color: #3182f6;
   color: #f9fafb;
   border-radius: 10px;
-  text-decoration : none;
+  text-decoration: none;
+}
+.mt20 {
+  margin-top: 20px;
 }
 </style>
