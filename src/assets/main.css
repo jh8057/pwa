@@ -47,7 +47,7 @@ body {
 }
 .ani{
   animation: textUp 0.5s ease-in-out normal forwards;
-  /* animation-delay: 1.5s; */
+  animation-delay: 1.5s;
 }
 
 @keyframes textUp {
@@ -71,4 +71,8 @@ p {
   font-family: none;
   font-weight: bold;
   color: #1b64da;
+}
+
+main{
+  padding: 20px;
 }

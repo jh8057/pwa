@@ -1,12 +1,12 @@
 <template>
   <main>
-    <content-one class="y50 mt100 h30" ref="contentOne" />
-    <content-two class="y50 m20 mb100 h30" ref="contentTwo" />
-    <content-Three class="y50 m20 h30" ref="contentThree" />
-    <content-Four class="y50 m20 h50" ref="contentFour" />
-    <content-Five class="y50 m20 h30" ref="contentFive" />
-    <content-Six class="y50 m20 h50" ref="contentSix" />
-    <content-Seven class="y50 m20 h60" ref="contentSeven" />
+    <content-one class="mt180 h30" ref="contentOne" />
+    <content-two class="mt180 h30 op0" ref="contentTwo" />
+    <content-Three class="h30 op0" ref="contentThree" />
+    <content-Four class="mt180 h30 op0" ref="contentFour" />
+    <content-Five class="mt180 h30 op0" ref="contentFive" />
+    <content-Six class="mt180 h50 op0" ref="contentSix" />
+    <content-Seven class="mt180 h50 op0" ref="contentSeven" />
   </main>
 
   <footer-section />
@@ -43,10 +43,8 @@ export default defineComponent({
   methods: {
     scrollEvent() {
       let observer = new IntersectionObserver((e) => {
-        console.log("event", e);
-        e.forEach((el, index) => {
+        e.forEach((el) => {
           if (el.isIntersecting) {
-            console.log("Is ON DisPlay", el.target, index);
             el.target.classList.add("ani");
           }
         });
@@ -72,8 +70,8 @@ export default defineComponent({
 .m20 {
   margin: 20px;
 }
-.mt100 {
-  margin-top: 100px;
+.mt180 {
+  margin-top: 180px;
 }
 .mb100 {
   margin-bottom: 100px;
@@ -82,15 +80,9 @@ export default defineComponent({
   min-height: 30vh;
 }
 .h50 {
-  margin-top: 10vh;
-  min-height: 30vh;
+  min-height: 50vh;
 }
-.h60 {
-  margin-top: 30vh;
-  min-height: 30vh;
-}
-.y50 {
-  position: relative;
-  padding-top: 50px;
+.op0 {
+  opacity: 0;
 }
 </style>
