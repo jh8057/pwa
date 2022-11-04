@@ -14,14 +14,14 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ContentOne from "../components/ContentOne.vue";
-import ContentTwo from "../components/ContentTwo.vue";
-import ContentThree from "../components/ContentThree.vue";
-import ContentFour from "../components/ContentFour.vue";
-import ContentFive from "../components/ContentFive.vue";
-import ContentSix from "../components/ContentSix.vue";
-import ContentSeven from "../components/ContentSeven.vue";
-import FooterSection from "../components/FooterSection.vue";
+import ContentOne from "../components/toss/ContentOne.vue";
+import ContentTwo from "../components/toss/ContentTwo.vue";
+import ContentThree from "../components/toss/ContentThree.vue";
+import ContentFour from "../components/toss/ContentFour.vue";
+import ContentFive from "../components/toss/ContentFive.vue";
+import ContentSix from "../components/toss/ContentSix.vue";
+import ContentSeven from "../components/toss/ContentSeven.vue";
+import FooterSection from "../components/toss/FooterSection.vue";
 
 export default defineComponent({
   components: {
