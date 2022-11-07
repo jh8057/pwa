@@ -14,6 +14,11 @@ const router = createRouter({
       name: "portfolio",
       component: () => import("../views/Portfolio.vue"),
     },
+    {
+      path: "/textImage",
+      name: "textImage",
+      component: () => import("../views/TextImage.vue"),
+    },
   ],
 });
 

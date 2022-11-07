@@ -27,6 +27,7 @@ export default defineComponent({
       menulist: [
         { name: "Home", link: "/" },
         { name: "Portfolio", link: "/portfolio" },
+        { name: "TextImage", link: "/textImage" },
       ],
       selected: "Home",
     };
