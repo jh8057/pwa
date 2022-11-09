@@ -3,12 +3,14 @@
 </template>
 
 <script lang="ts">
-import { createP5 } from "./composable/TextImage";
+import useTextImage from "./composable/useTextImage";
 import { onMounted } from "vue";
 export default {
   setup() {
+    const { p5, createP5, draw } = useTextImage();
     onMounted(() => {
-      createP5("p5-container", 100, 100, "green");
+      p5.value = createP5("p5-container", 500, 400, "green");
+      draw(p5.value);
     });
   },
 };
@@ -16,8 +18,8 @@ export default {
 
 <style scoped>
 #p5-container {
-  width: 90vw;
-  height: 74vh;
+  width: 500px;
+  height: 400px;
   background-color: black;
 }
 </style>
