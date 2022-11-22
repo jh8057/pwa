@@ -19,10 +19,10 @@ const rtf1 = new Intl.RelativeTimeFormat("en", { style: "long" });
 console.log(rtf1.format(-100, "day"));
 
 //timeago module
-let timeago = require("timeago.js");
-let timeDiff1 = timeago.format("2022-08-22", "en");
-let timeDiff2 = timeago.format(Date.now() - 2 * 1000 * 60 * 60, "en");
-console.log("timeDiff : ", timeDiff1, "/", timeDiff2);
+// let timeago = require("timeago.js");
+// let timeDiff1 = timeago.format("2022-08-22", "en");
+// let timeDiff2 = timeago.format(Date.now() - 2 * 1000 * 60 * 60, "en");
+// console.log("timeDiff : ", timeDiff1, "/", timeDiff2);
 
 // Intl
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
