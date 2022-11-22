@@ -1,23 +1,24 @@
 //money
-const number = 123456.789;
-let formatter = new Intl.NumberFormat("kr", {
-  style: "currency",
-  currency: "KRW",
-});
-console.log(formatter.format(number));
+export default () => {
+  const number = 123456.789;
+  let formatter = new Intl.NumberFormat("kr", {
+    style: "currency",
+    currency: "KRW",
+  });
+  console.log(formatter.format(number));
 
-//date
-const date = new Date();
-let formatterDate = new Intl.DateTimeFormat("kr", {
-  dateStyle: "full",
-  timeStyle: "short",
-});
-console.log(formatterDate.format(date));
+  //date
+  const date = new Date();
+  let formatterDate = new Intl.DateTimeFormat("kr", {
+    dateStyle: "full",
+    timeStyle: "short",
+  });
+  console.log(formatterDate.format(date));
 
-//relate-date
-const rtf1 = new Intl.RelativeTimeFormat("en", { style: "long" });
-console.log(rtf1.format(-100, "day"));
-
+  //relate-date
+  const rtf1 = new Intl.RelativeTimeFormat("en", { style: "long" });
+  console.log(rtf1.format(-100, "day"));
+};
 //timeago module
 // let timeago = require("timeago.js");
 // let timeDiff1 = timeago.format("2022-08-22", "en");
