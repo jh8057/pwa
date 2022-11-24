@@ -1,23 +1,32 @@
 //money
 export default () => {
-  const number = 123456.789;
-  let formatter = new Intl.NumberFormat("kr", {
-    style: "currency",
-    currency: "KRW",
-  });
-  console.log(formatter.format(number));
+  const makeKoreaMoneyFormat = (num: number | bigint) => {
+    let formatter = new Intl.NumberFormat("kr", {
+      style: "currency",
+      currency: "KRW",
+    });
+    return formatter.format(num);
+  };
 
-  //date
-  const date = new Date();
-  let formatterDate = new Intl.DateTimeFormat("kr", {
-    dateStyle: "full",
-    timeStyle: "short",
-  });
-  console.log(formatterDate.format(date));
+  const getNowDate = () => {
+    const date = new Date();
+    let formatterDate = new Intl.DateTimeFormat("kr", {
+      dateStyle: "full",
+      timeStyle: "short",
+    });
+    return formatterDate.format(date);
+  };
 
-  //relate-date
-  const rtf1 = new Intl.RelativeTimeFormat("en", { style: "long" });
-  console.log(rtf1.format(-100, "day"));
+  const getDiffDate = (nowDate: number) => {
+    const rtf1 = new Intl.RelativeTimeFormat("en", { style: "long" });
+    console.log(rtf1.format(nowDate, "day"));
+  };
+
+  return {
+    makeKoreaMoneyFormat,
+    getNowDate,
+    getDiffDate,
+  };
 };
 //timeago module
 // let timeago = require("timeago.js");
