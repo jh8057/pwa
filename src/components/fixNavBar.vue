@@ -1,8 +1,8 @@
 <template>
-  <ul>
+  <ul class="navigationBar">
     <li>Home</li>
-    <li>a</li>
-    <li>b</li>
+    <li>Portfolio</li>
+    <li>TextImage</li>
     <li>More</li>
   </ul>
 </template>
@@ -12,4 +12,16 @@ import { defineComponent } from "vue";
 export default defineComponent({});
 </script>
 
-<style></style>
+<style scoped>
+.navigationBar {
+  position: fixed;
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  gap: 10px;
+}
+
+.navigationBar li {
+  cursor: pointer;
+}
+</style>
