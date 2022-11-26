@@ -1,4 +1,5 @@
 <template>
+  <!-- <button class="menuBtn">MENU</button> -->
   <ul class="navigationBar">
     <li>Home</li>
     <li>Portfolio</li>
