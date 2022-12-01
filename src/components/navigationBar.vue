@@ -28,6 +28,7 @@ export default defineComponent({
         { name: "Home", link: "/" },
         { name: "Portfolio", link: "/portfolio" },
         { name: "TextImage", link: "/textImage" },
+        { name: "TestPage", link: "/testPage" },
       ],
       selected: "Home",
     };
