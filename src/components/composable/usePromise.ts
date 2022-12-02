@@ -1,18 +1,17 @@
 export default () => {
-  const delayPromise = () => {
+  const delayPromise = (flag: boolean) => {
     return new Promise((resolve, rejects) => {
-      try {
-        setTimeout(() => {
-          throw new Error("timeout");
-        }, 1000);
-        setTimeout(() => {
-          console.log("pass");
-          resolve;
-        }, 2000);
-      } catch (error) {
-        console.log(error);
-        rejects;
-      }
+      setTimeout(() => {
+        try {
+          if (flag) {
+            throw new Error("timeout");
+          }
+          resolve("pass");
+        } catch (e) {
+          console.error(e);
+          rejects("timeout");
+        }
+      }, 1000);
     });
   };
 

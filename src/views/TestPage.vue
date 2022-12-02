@@ -11,10 +11,22 @@ export default {
     const { delayPromise } = usePromise();
     onMounted(() => {
       let promise = delayPromise;
-      console.log(promise);
-      promise().then((res) => {
-        console.log(res);
-      });
+      console.log("---promise start : true---");
+      promise(true)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((e) => {
+          console.error(e);
+        });
+      console.log("---promise start : false---");
+      promise(false)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((e) => {
+          console.error(e);
+        });
     });
   },
 };
