@@ -8,7 +8,8 @@ import { onMounted } from "vue";
 import usePromise from "../components/composable/usePromise";
 export default {
   setup() {
-    const { delayPromise } = usePromise();
+    const { delayPromise, timeoutPromise } = usePromise();
+
     onMounted(() => {
       let promise = delayPromise;
       console.log("---promise start : true---");
@@ -26,6 +27,14 @@ export default {
         })
         .catch((e) => {
           console.error(e);
+        });
+
+      Promise.race([timeoutPromise, promise(false)])
+        .then((res) => {
+          console.log("success", res);
+        })
+        .catch((e) => {
+          console.error("error:timeout", e);
         });
     });
   },

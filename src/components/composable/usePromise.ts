@@ -15,7 +15,14 @@ export default () => {
     });
   };
 
+  const timeoutPromise = new Promise((_, reject) => {
+    setTimeout(() => {
+      reject("timeout");
+    }, 1100);
+  });
+
   return {
     delayPromise,
+    timeoutPromise,
   };
 };
