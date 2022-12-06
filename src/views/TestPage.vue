@@ -1,12 +1,16 @@
 <template>
   <h1>Test Page</h1>
+  <skeleton-ui />
 </template>
 
 <script lang="ts">
-// import { defineComponent } from "vue";
-import { onMounted } from "vue";
+import { defineComponent, onMounted } from "vue";
 import usePromise from "../components/composable/usePromise";
-export default {
+import SkeletonUi from "../components/SkeletonUi.vue";
+export default defineComponent({
+  components: {
+    SkeletonUi,
+  },
   setup() {
     const { delayPromise, timeoutPromise } = usePromise();
 
@@ -38,7 +42,7 @@ export default {
         });
     });
   },
-};
+});
 </script>
 
 <style></style>
