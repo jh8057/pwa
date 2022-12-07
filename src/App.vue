@@ -7,13 +7,13 @@
 </template>
 
 <script lang="ts">
-import navigationBar from "./components/navigationBar.vue";
+import NavigationBar from "./components/NavigationBar.vue";
 import { RouterLink, RouterView } from "vue-router";
 import { defineComponent } from "vue";
-import FixNavBar from "./components/fixNavBar.vue";
+import FixNavBar from "./components/FixNavBar.vue";
 export default defineComponent({
   components: {
-    navigationBar,
+    NavigationBar,
     FixNavBar,
   },
 });

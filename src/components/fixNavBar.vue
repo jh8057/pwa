@@ -14,6 +14,9 @@ export default defineComponent({});
 </script>
 
 <style scoped>
+/**
+  *TODO: make css
+  */
 .navigationBar {
   position: fixed;
   display: flex;
