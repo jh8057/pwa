@@ -1,5 +1,5 @@
 <template>
-  <navigation-bar />
+  <top-navigation />
 
   <RouterView />
 
@@ -7,14 +7,14 @@
 </template>
 
 <script lang="ts">
-import NavigationBar from "./components/NavigationBar.vue";
+import TopNavigation from "./components/TopNavigation.vue";
 import { RouterLink, RouterView } from "vue-router";
 import { defineComponent } from "vue";
-import FixNavBar from "./components/FixNavBar.vue";
+import BottomNavBar from "./components/BottomNavBar.vue";
 export default defineComponent({
   components: {
-    NavigationBar,
-    FixNavBar,
+    TopNavigation,
+    BottomNavBar,
   },
 });
 </script>
