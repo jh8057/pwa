@@ -15,7 +15,7 @@ export default defineComponent({});
 
 <style scoped>
 /**
-  *TODO: make css
+  * TODO: make css
   */
 .navigationBar {
   position: fixed;
