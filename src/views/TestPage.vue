@@ -1,5 +1,6 @@
 <template>
   <h1>Test Page</h1>
+  <input class="inputBox" />
 </template>
 
 <script lang="ts">
