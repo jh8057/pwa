@@ -7,6 +7,9 @@ describe("My First Test", () => {
     cy.contains("김재현입니다");
     cy.contains("TestPage").click();
 
-    cy.get(".inputBox").type("Hello World").should("have.value", "Hello World");
+    cy.get(".inputBox").as("inputBox");
+    cy.get("@inputBox").type("Hello World");
+
+    cy.get("@inputBox").should("have.value", "Hello World");
   });
 });
