@@ -8,3 +8,4 @@
 - http : [link](https://http.cat/)
 - cypress : [link](https://docs.cypress.io/guides/end-to-end-testing/writing-your-first-end-to-end-test#Next-steps)
 - d3 : [link](https://d3js.org/)
+- chartjs : [link](https://www.chartjs.org/)
