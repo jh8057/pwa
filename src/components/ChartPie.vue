@@ -1,0 +1,17 @@
+<template>
+  <div>
+    <Pie :data="chartData" :options="charOption" />
+  </div>
+  <button @click="changeChartDataSize">change Data</button>
+</template>
+
+<script setup lang="ts">
+import useChartjs from "./composable/useChartjs";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Pie } from "vue-chartjs";
+ChartJS.register(ArcElement, Tooltip, Legend);
+
+const { chartData, charOption, changeChartDataSize } = useChartjs();
+</script>
+
+<style></style>
