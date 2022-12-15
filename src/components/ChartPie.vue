@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="chartWrap">
     <Pie :data="chartData" :options="charOption" />
   </div>
   <button @click="changeChartDataSize">change Data</button>
@@ -18,4 +18,9 @@ const { chartData, charOption, changeChartDataSize } = useChartjs();
 */
 </script>
 
-<style></style>
+<style>
+.chartWrap{
+  margin: auto;
+  width : 50%;
+}
+</style>
