@@ -12,6 +12,10 @@ import { Pie } from "vue-chartjs";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const { chartData, charOption, changeChartDataSize } = useChartjs();
+
+/**
+* TODO: Add Re-rendering
+*/
 </script>
 
 <style></style>
