@@ -6,6 +6,7 @@
 </template>
 
 <script setup lang="ts">
+import {computed,watch} from 'vue'
 import useChartjs from "./composable/useChartjs";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "vue-chartjs";
@@ -16,6 +17,9 @@ const { chartData, charOption, changeChartDataSize } = useChartjs();
 /**
 * TODO: Add Re-rendering
 */
+watch(chartData , ()=>{
+  console.log('dataChange',chartData)
+})
 </script>
 
 <style>
