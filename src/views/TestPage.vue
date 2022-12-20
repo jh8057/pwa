@@ -2,12 +2,17 @@
   <h1>Test Page</h1>
   <input class="inputBox" />
   <chart-pie />
+  <section>
+    <h2>Date Picker</h2>
+    <date-picker />
+  </section>
 </template>
 
 <script setup lang="ts">
 import { onMounted } from "vue";
 import usePromise from "../components/composable/usePromise";
 import ChartPie from "../components/ChartPie.vue";
+import DatePicker from "../components/DatePicker.vue";
 
 const { delayPromise, timeoutPromise } = usePromise();
 
