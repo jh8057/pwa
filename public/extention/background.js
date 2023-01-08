@@ -13,30 +13,36 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   }
 });
 
-let YOUTUBE_START_TIME = 0;
-let YOUTUBE_USE_TIME = 0;
+let youtubeStartTime = 0;
+let youtubeUseTime = 0;
 
 chrome.tabs.onActivated.addListener(function () {
   chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-    var currentURL = tabs[0].url;
+    if (tabs[0] && tabs[0].url) {
+      const currentURL = tabs[0].url;
+      /**
+       * Calculate the amount of time spent on YouTube
+       */
 
-    /**
-     * TODO: exchange to includes function
-     */
-    if (currentURL === "https://www.youtube.com/") {
-      YOUTUBE_START_TIME = new Date();
-    } else {
-      if (YOUTUBE_START_TIME) {
-        if (YOUTUBE_USE_TIME > 0) {
-          YOUTUBE_USE_TIME +=
-            new Date().getTime() - YOUTUBE_START_TIME.getTime();
-        } else {
-          YOUTUBE_USE_TIME =
-            new Date().getTime() - YOUTUBE_START_TIME.getTime();
+      if (currentURL.includes("https://www.youtube.com/")) {
+        youtubeStartTime = new Date();
+      } else {
+        if (youtubeStartTime) {
+          if (youtubeUseTime > 0) {
+            youtubeUseTime += new Date().getTime() - youtubeStartTime.getTime();
+          } else {
+            youtubeUseTime = new Date().getTime() - youtubeStartTime.getTime();
+          }
         }
+        youtubeStartTime = null;
       }
-      YOUTUBE_START_TIME = null;
+      console.log("YOUTUBE_USE", youtubeUseTime);
     }
-    console.log("YOUTUBE_USE", YOUTUBE_USE_TIME);
   });
+});
+
+// Called when the user clicks on the browser action.
+chrome.action.onClicked.addListener((tab) => {
+  console.log("START");
+  chrome.tabs.create({ url: "https://www.youtube.com" });
 });
