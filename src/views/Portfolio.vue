@@ -3,10 +3,9 @@
     <content-one class="mt180 h30" ref="contentOne" />
     <content-two class="mt180 h30 op0" ref="contentTwo" />
     <content-Three class="h30 op0" ref="contentThree" />
-    <content-Four class="mt180 h30 op0" ref="contentFour" />
-    <content-Five class="mt180 h30 op0" ref="contentFive" />
-    <content-Six class="mt180 h50 op0" ref="contentSix" />
-    <content-Seven class="mt180 h50 op0" ref="contentSeven" />
+    <content-Four class="mt180 pb100 h30 op0" ref="contentFour" />
+    <content-Five class="mt180 pb100 h30 op0" ref="contentFive" />
+    <content-Six class="mt180 h40 op0" ref="contentSix" />
   </main>
 
   <footer-section />
@@ -14,14 +13,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ContentOne from "../components/toss/ContentOne.vue";
-import ContentTwo from "../components/toss/ContentTwo.vue";
-import ContentThree from "../components/toss/ContentThree.vue";
-import ContentFour from "../components/toss/ContentFour.vue";
-import ContentFive from "../components/toss/ContentFive.vue";
-import ContentSix from "../components/toss/ContentSix.vue";
-import ContentSeven from "../components/toss/ContentSeven.vue";
-import FooterSection from "../components/toss/FooterSection.vue";
+import ContentOne from "../components/Scroll/ContentOne.vue";
+import ContentTwo from "../components/Scroll/ContentTwo.vue";
+import ContentThree from "../components/Scroll/ContentThree.vue";
+import ContentFour from "../components/Scroll/ContentFour.vue";
+import ContentFive from "../components/Scroll/ContentFive.vue";
+import ContentSix from "../components/Scroll/ContentSix.vue";
+import FooterSection from "../components/Scroll/FooterSection.vue";
 
 export default defineComponent({
   components: {
@@ -31,17 +29,16 @@ export default defineComponent({
     ContentFour,
     ContentFive,
     ContentSix,
-    ContentSeven,
     FooterSection,
   },
   data() {
     return {};
   },
   mounted() {
-    this.scrollEvent();
+    this.ScrollEvent();
   },
   methods: {
-    scrollEvent() {
+    ScrollEvent() {
       let observer = new IntersectionObserver((e) => {
         e.forEach((el) => {
           if (el.isIntersecting) {
@@ -59,8 +56,6 @@ export default defineComponent({
       observer.observe(five.$el);
       let six = this.$refs.contentSix as any;
       observer.observe(six.$el);
-      let seven = this.$refs.contentSeven as any;
-      observer.observe(seven.$el);
     },
   },
 });
@@ -73,14 +68,14 @@ export default defineComponent({
 .mt180 {
   margin-top: 180px;
 }
-.mb100 {
-  margin-bottom: 100px;
+.pb100 {
+  padding-bottom: 100px;
 }
 .h30 {
   min-height: 30vh;
 }
-.h50 {
-  min-height: 50vh;
+.h40 {
+  min-height: 40vh;
 }
 .op0 {
   opacity: 0;
