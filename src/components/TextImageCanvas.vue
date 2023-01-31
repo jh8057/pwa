@@ -18,6 +18,7 @@ export default {
 
 <style scoped>
 #p5-container {
+  margin: auto;
   width: 500px;
   height: 400px;
   background-color: black;
