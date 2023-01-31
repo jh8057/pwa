@@ -20,10 +20,6 @@ chrome.tabs.onActivated.addListener(function () {
   chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
     if (tabs[0] && tabs[0].url) {
       const currentURL = tabs[0].url;
-      /**
-       * Calculate the amount of time spent on YouTube
-       */
-
       if (currentURL.includes("https://www.youtube.com/")) {
         youtubeStartTime = new Date();
       } else {
