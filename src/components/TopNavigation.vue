@@ -7,7 +7,6 @@
           :key="menu.name"
           :to="menu.link"
           class="menu"
-          @click="doSelect(menu.name)"
           ><span
             :class="['menu__name', { selected: menu.name === selected }]"
             >{{ menu.name }}</span
@@ -33,9 +32,12 @@ export default defineComponent({
       selected: "Home",
     };
   },
-  methods: {
-    doSelect(name: string) {
-      this.selected = name;
+  watch: {
+    $route(to, from) {
+      let str = to.name;
+      let firstChar = str.charAt(0);
+      let others = str.slice(1);
+      this.selected = firstChar.toUpperCase() + others;
     },
   },
 });
