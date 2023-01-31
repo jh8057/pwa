@@ -12,6 +12,7 @@ export default defineComponent({
   components: {
     TextImageCanvas,
   },
+  // - p5 challenge : [link](https://www.youtube.com/watch?v=55iwMYv8tGI)
 });
 </script>
 
