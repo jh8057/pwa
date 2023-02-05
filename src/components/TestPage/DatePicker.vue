@@ -1,4 +1,5 @@
 <template>
+  <h2>Date Picker</h2>
   <Datepicker class="datepicker__wrapper" v-model="date"></Datepicker>
 </template>
 
