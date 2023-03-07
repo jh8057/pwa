@@ -9,6 +9,9 @@
   <section>
     <toast-editor />
   </section>
+  <section>
+    <dynamic-import />
+  </section>
 </template>
 
 <script setup lang="ts">
@@ -17,6 +20,7 @@ import usePromise from "../components/composable/usePromise";
 import ChartPie from "../components/TestPage/ChartPie.vue";
 import DatePicker from "../components/TestPage/DatePicker.vue";
 import ToastEditor from "../components/TestPage/ToastEditor.vue";
+import DynamicImport from "../components/TestPage/DynamicImport.vue";
 
 const { delayPromise, timeoutPromise } = usePromise();
 
