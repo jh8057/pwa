@@ -1,7 +1,7 @@
 <template>
   <div class="matter__wrap">
     <h2>2D - Matter.js</h2>
-    <div id="matterCanvas"></div>
+    <div class="matter__canvas" id="matterCanvas"></div>
   </div>
 </template>
 
@@ -14,3 +14,9 @@ onMounted(() => {
   matter();
 });
 </script>
+
+<style scoped>
+.matter__canvas {
+  width: 100%;
+}
+</style>
