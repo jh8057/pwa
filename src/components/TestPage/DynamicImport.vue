@@ -7,7 +7,8 @@
 
 <script lang="ts">
 import { defineAsyncComponent } from "vue";
-export default {
+import { defineComponent } from "vue";
+export default defineComponent({
   components: {
     "date-dynamic": defineAsyncComponent({
       loader: () => import("./DatePicker.vue"),
@@ -25,9 +26,12 @@ export default {
   },
   methods: {
     changeComponent() {
-      this.current =
-        this.current === "chart-dynamic" ? "date-dynamic" : "chart-dynamic";
+      if (this.current === "chart-dynamic") {
+        this.current = "date-dynamic";
+      } else {
+        this.current = "chart-dynamic";
+      }
     },
   },
-};
+});
 </script>
