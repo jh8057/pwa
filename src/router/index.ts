@@ -14,10 +14,15 @@ const router = createRouter({
       name: "portfolio",
       component: () => import("../views/Portfolio.vue"),
     },
+    // {
+    //   path: "/textImage",
+    //   name: "textImage",
+    //   component: () => import("../views/TextImage.vue"),
+    // },
     {
-      path: "/textImage",
-      name: "textImage",
-      component: () => import("../views/TextImage.vue"),
+      path: "/graphic",
+      name: "graphic",
+      component: () => import("../views/GraphicView.vue"),
     },
     {
       path: "/testPage",
